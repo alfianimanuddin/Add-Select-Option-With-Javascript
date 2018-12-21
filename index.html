@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <select id="selectCategory" size="8">
+    <option>Add Category</option>
+  </select>
+  <input type="text" id="myText">
+  <button type="button" onclick="addCategory()">Insert option</button>
+</form>
+
+<script>
+let addCategory = () => {
+  let categoryName = document.getElementById("myText").value;
+  let selectCategory = document.getElementById("selectCategory");
+  let option = document.createElement("option");
+
+  option.text = categoryName;
+  selectCategory.add(option, selectCategory[0]);
+}
+</script>
+
+</body>
+</html>
