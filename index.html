@@ -1,25 +1,39 @@
-<!DOCTYPE html>
-<html>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<form>
-  <select id="selectCategory" size="8">
-    <option>Add Category</option>
-  </select>
-  <input type="text" id="myText">
-  <button type="button" onclick="addCategory()">Insert option</button>
-</form>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<script>
-let addCategory = () => {
-  let categoryName = document.getElementById("myText").value;
-  let selectCategory = document.getElementById("selectCategory");
-  let option = document.createElement("option");
+    <title>Add Category Into Option</title>
+  </head>
+  <body>
+    <form>
+      <select id="selectCategory" size="8">
+        <option>Add Category</option>
+      </select>
+      <input type="text" id="myText">
+      <button type="button" onclick="addCategory()">Insert option</button>
+    </form>
 
-  option.text = categoryName;
-  selectCategory.add(option, selectCategory[0]);
-}
-</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-</body>
+    <script>
+      let addCategory = () => {
+        let categoryName = document.getElementById("myText").value;
+        let selectCategory = document.getElementById("selectCategory");
+        let option = document.createElement("option");
+
+        option.text = categoryName;
+        selectCategory.add(option, selectCategory[0]);
+      }
+    </script>
+  </body>
 </html>
